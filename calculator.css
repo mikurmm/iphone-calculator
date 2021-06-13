@@ -1,0 +1,56 @@
+.console .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.console .row .button {
+  color: white;
+  width: 66px;
+  height: 66px;
+  line-height: 66px;
+  border-radius: 33px;
+  text-align: center;
+  cursor: pointer;
+}
+.console .row .button:hover {
+  opacity: 0.8;
+}
+.console .row .button.button1 {
+  background-color: lightgray;
+  color: black;
+  font-size: 24px;
+}
+.console .row .button.button2 {
+  background-color: orange;
+  color: white;
+  font-size: 36px;
+  line-height: 60px;
+}
+.console .row .button.button2.focus {
+  background-color: white;
+  color: orange;
+}
+.console .row .button.button3 {
+  background-color: #6a6a6a;
+  color: white;
+  font-size: 30px;
+}
+.console .row .button.button-wide {
+  text-align: left;
+  width: calc(65px * 2 + ((100% - 65px * 4) / 3));
+}
+.console .row .button.button-wide span {
+  margin-left: 23px;
+}
+
+.console .row .button.disabled {
+  cursor: not-allowed;
+  background-color: black;
+  color: white;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+.console .row .button.disabled:hover {
+  opacity: 1;
+}

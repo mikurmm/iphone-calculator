@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>電卓</title>
+  <link rel="stylesheet" type="text/css" href="layout.css">
+  <link rel="stylesheet" type="text/css" href="calculator.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="main">
+      <h1>電卓</h1>
+
+      <div class="frame">
+        <div class="screen">0</div>
+        <div class="console">
+          <div class="row">
+            <div class="button button1 clear">AC</div>
+            <div class="button button1 disabled">±</div>
+            <div class="button button1 disabled">%</div>
+            <div class="button button2 operator">÷</div>
+          </div>
+
+          <div class="row">
+            <div class="button button3 number">7</div>
+            <div class="button button3 number">8</div>
+            <div class="button button3 number">9</div>
+            <div class="button button2 operator">×</div>
+          </div>
+
+          <div class="row">
+            <div class="button button3 number">4</div>
+            <div class="button button3 number">5</div>
+            <div class="button button3 number">6</div>
+            <div class="button button2 operator">−</div>
+          </div>
+
+          <div class="row">
+            <div class="button button3 number">1</div>
+            <div class="button button3 number">2</div>
+            <div class="button button3 number">3</div>
+            <div class="button button2 operator">+</div>
+          </div>
+
+          <div class="row">
+            <div class="button button3 button-wide number"><span>0</span></div>
+            <div class="button button3 disabled">.</div>
+            <div class="button button2 operator result">=</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
