@@ -69,6 +69,13 @@ $(function() {
     }, [])
   }
 
+  // ゼロ除算されてるかどうかのチェック
+  const checkZeroDivide = () => {
+    const length = stack.length
+    if (length <= 1) return false
+    return stack[length - 1].value === 0 && stack[length - 2].operator === '÷'
+  }
+
   $('.button').click(function () {
     const lastElement = stack[stack.length - 1]
     const buttonText = $(this).text()
@@ -83,6 +90,12 @@ $(function() {
       return
     }
 
+    if (!$(this).hasClass('number') && checkZeroDivide()) {
+      stack.splice(0)
+      $('.screen').text('エラー')
+      return
+    }
+
     if ($(this).hasClass('result')) {
       const result = calculateResult()
       stack.splice(0)
@@ -93,6 +106,7 @@ $(function() {
 
     if ($(this).hasClass('number')) {
       $('.clear').text('C')
+
       if (!lastElement) {
         stack.push({ value, operator: null })
         $('.screen').text(value)
